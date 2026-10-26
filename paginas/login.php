@@ -16,8 +16,14 @@ if(isset($_POST['txt_login'])) {
         $usuario = mysql_fetch_assoc($sql);
         $_SESSION['id_usuario'] = $usuario['id_usuario'];
         $_SESSION['nome_usuario'] = $usuario['nome_usuario'];
-        header("Location: loja.php");
-        exit;
+        $id_usuario = $_SESSION['id_usuario'];
+        if($id_usuario == 1) {
+            header("Location: gerenciamento.php");
+            exit;
+        } else {
+            header("Location: loja.php");
+            exit;   
+        }
     } else {
         $erro_login = true;
     }
