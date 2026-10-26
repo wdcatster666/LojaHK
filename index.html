@@ -1,0 +1,87 @@
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Início | Loja - Hollow Knight</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet">
+
+    <!--Estilo da Página-->
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            font-family: 'Cinzel', 'Trajan Pro', Georgia, serif;
+            background-image: url('imagens/imagem_fundo.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        @keyframes surgir {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .logo {
+            margin-top: 32px;
+            width: 60%;
+            height: auto;
+            animation: surgir 1.2s ease-out;
+        }
+
+        .logo img {
+            width: 100%;
+            height: auto;
+        }
+
+        .botao {
+            height: 80px;
+            width: 300px;
+            background-color: #292929;
+            color: white;
+            font-family: inherit;
+            font-size: 32px;
+            font-weight: bold;
+            border: solid 4px #995700;
+            border-radius: 10px;
+            box-shadow: #DB7D00 0px 0px 24px 0px;
+            margin-top: auto;
+            margin-bottom: 128px;
+            cursor: pointer;
+            animation: surgir 1.2s ease-out 0.3s backwards;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+        }
+
+        .botao:hover {
+            background-color: #181818;
+            transform: scale(1.05);
+        }
+    </style>
+
+    <!--Script da Página-->
+
+    <script>
+        function mudarPagina() {
+            window.location = "paginas/login.php";
+        }
+    </script>
+</head>
+
+<!--Conteúdo Principal-->
+
+<body>
+    <div class="logo">
+        <img src="imagens/logo.png">
+    </div>
+    <button class="botao" onclick="mudarPagina()">Explore a Loja</button>
+</body>
+</html>
